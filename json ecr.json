@@ -1,0 +1,31 @@
+{
+    "family": "nasa-api-task",
+    "containerDefinitions": [
+        {
+            "name": "nasa-api-container",
+            "image": "your_image_name_here",
+            "cpu": 256,
+            "memoryReservation": 512,
+            "essential": true,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "protocol": "tcp"
+                }
+            ],
+            "environment": [
+                {
+                    "name": "ENV_VAR_1",
+                    "value": "value1"
+                },
+                {
+                    "name": "ENV_VAR_2",
+                    "value": "value2"
+                }
+            ]
+        }
+    ],
+    "networkMode": "bridge",
+    "executionRoleArn": "your_execution_role_arn_here",
+    "taskRoleArn": "your_task_role_arn_here"
+}
